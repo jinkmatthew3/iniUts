@@ -1,0 +1,7 @@
+{
+  "name": "iniuts",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

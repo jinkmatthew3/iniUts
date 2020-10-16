@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-form>
+    <ion-list>
+      <ion-item>
+        <ion-label>URL Foto</ion-label>
+        <ion-input type="text" placeholder="foto" value="{{ loaded.urlFoto }}">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Merk</ion-label>
+        <ion-input type="text" placeholder="Merk" value="{{ loaded.merk }}">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Model</ion-label>
+        <ion-input type="text" placeholder="Model" value="{{ loaded.model }}">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Harga</ion-label>
+        <ion-input type="text" placeholder="Harga" value="{{ loaded.harga }}">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Stok</ion-label>
+        <ion-input type="text" placeholder="Stok" value="{{ loaded.stok }}">    
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" (click)="notifTambah()">
+      Edit
+    </ion-button>
+  </ion-form>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-form>
+    <ion-list>
+      <ion-item>
+        <ion-label>URL Foto</ion-label>
+        <ion-input type="text" placeholder="foto">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option value="c">CPU</ion-select-option>
+          <ion-select-option value="r">RAM</ion-select-option>
+          <ion-select-option value="m">Motherboard</ion-select-option>
+          <ion-select-option value="g">GPU</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Merk</ion-label>
+        <ion-input type="text" placeholder="Merk">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Model</ion-label>
+        <ion-input type="text" placeholder="Model">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Harga</ion-label>
+        <ion-input type="text" placeholder="Harga">    
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Stok</ion-label>
+        <ion-input type="text" placeholder="Stok">    
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" (click)="notifTambah()">
+      Tambahkan
+    </ion-button>
+  </ion-form>
+</ion-content>

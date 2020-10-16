@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" fill="">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
+    <ion-button slot="primary" fill="">
+      <ion-icon name="grid-outline" ></ion-icon>
+    </ion-button>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item *ngFor="let barangC of barangCPU" [routerLink]="['./', barangC.id]">
+            <ion-thumbnail class="ion-margin">
+              <ion-img [src]="barangC.urlFoto" ></ion-img>
+            </ion-thumbnail>
+              {{ barangC.merk }} {{ barangC.model }}<br>
+              Rp. {{ barangC.harga }}<br>
+              Stock: {{ barangC.stok }}
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item *ngFor="let barangR of barangRAM" [routerLink]="['./', barangR.id]">
+            <ion-thumbnail class="ion-margin">
+              <ion-img [src]="barangR.urlFoto" ></ion-img>
+            </ion-thumbnail>
+            {{ barangR.merk }} {{ barangR.model }}<br>
+            Rp. {{ barangR.harga }}<br>
+            Stock: {{ barangR.stok }}
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item *ngFor="let barangM of barangMot" [routerLink]="['./', barangM.id]">
+            <ion-thumbnail class="ion-margin">
+              <ion-img [src]="barangM.urlFoto" ></ion-img>
+            </ion-thumbnail>
+            {{ barangM.merk }} {{ barangM.model }}<br>
+            Rp. {{ barangM.harga }}<br>
+            Stock: {{ barangM.stok }}
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item *ngFor="let barangG of barangGPU" [routerLink]="['./', barangG.id]">
+            <ion-thumbnail class="ion-margin">
+              <ion-img [src]="barangG.urlFoto" ></ion-img>
+            </ion-thumbnail>
+            {{ barangG.merk }} {{ barangG.model }}<br>
+            Rp. {{ barangG.harga }}<br>
+            Stock: {{ barangG.stok }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

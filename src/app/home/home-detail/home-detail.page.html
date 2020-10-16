@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>home-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-img style="width: 300px; height: 300px;" [src]="loaded.urlFoto"></ion-img>
+    </ion-item>
+    <div>
+      <ion-item>{{ loaded.merk }} {{ loaded.model }}
+        <br> Rp. {{ loaded.harga }}
+        <br> Stock: {{ loaded.stok }}
+        <br>
+        <br>
+      </ion-item>
+      <ion-item *ngIf="loaded.id.includes('cpu')">
+        Base Clock : {{ loaded.baseClock }} <br>
+        Boost Clock : {{ loaded.boostClock }} <br>
+        Jumlah Core : {{ loaded.jumlahCore }} <br>
+        Jumlah Thread : {{ loaded.jumlahThread }} <br> 
+      </ion-item>
+      <ion-item *ngIf="loaded.id.includes('ram')">
+        Speed : {{ loaded.speed }}<br>
+        Size : {{ loaded.size }}<br>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
